@@ -169,6 +169,83 @@ export const PRODUCTS: Product[] = [
     category: 'Grinders & Tools',
     image: 'https://cannabmall.com/cdn/shop/products/marijuana_grinders_for_weed_manual_spice_grinder_1000x.jpg?v=1720695474',
     price: '$19.99'
+  },
+  // Kratom & 7-Hydroxy
+  {
+    id: 'k1',
+    name: 'Kratom Powder, Capsules & Tablets',
+    description: 'Premium kratom available in powder, capsules, and tablets for your preferred method.',
+    category: 'Kratom & 7-Hydroxy',
+    image: 'https://wpcdn.web.wsu.edu/wp-nursing/uploads/sites/3014/2021/07/kratom-792x491.jpg',
+    price: 'visit in store'
+  },
+  {
+    id: 'k2',
+    name: '7-Hydroxy Products',
+    description: 'High-quality 7-hydroxy products including Krave and Perks Dozo.',
+    category: 'Kratom & 7-Hydroxy',
+    image: 'https://cbdwholesaleus.com/image/cache/catalog/767203576007-800x800_0.jpg',
+    price: 'visit in store'
+  },
+  // THC Products
+  {
+    id: 'thc1',
+    name: 'THC Pre-Rolls',
+    description: 'Ready-to-enjoy premium THC pre-rolls.',
+    category: 'THC Products',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScthBDvggkyoczOGO_IzCTXONOe77DAx6ecA&s',
+    price: 'visit in store'
+  },
+  {
+    id: 'thc2',
+    name: 'THC Carts & Gummies',
+    description: 'Wide selection of THC cartridges and delicious gummies.',
+    category: 'THC Products',
+    image: 'https://cdn.shopify.com/s/files/1/2426/0015/files/Pink_Purple_Business_Solution_Pitch_Deck_Presentation.jpg?v=1721427187',
+    price: 'visit in store'
+  },
+  // Cigars & Cigarettes
+  {
+    id: 'cig1',
+    name: 'Premium Cigars',
+    description: 'A curated selection of premium cigars for any occasion.',
+    category: 'Cigars & Cigarettes',
+    image: 'https://www.cratejoy.com/cdn/shop/products/fRl8lIGjRUS4vKDsSkSu.jpg?v=1698111615',
+    price: 'visit in store'
+  },
+  {
+    id: 'cig2',
+    name: 'Cigarettes',
+    description: 'All major brands of cigarettes available.',
+    category: 'Cigars & Cigarettes',
+    image: 'https://tobaccoinsider.com/wp-content/uploads/2024/08/image-38-1024x683.png',
+    price: 'visit in store'
+  },
+  // Detox Solutions
+  {
+    id: 'dtx1',
+    name: 'Detox Drinks',
+    description: 'Reliable detox solutions including Stinger and High Voltage brands.',
+    category: 'Detox Solutions',
+    image: 'https://cdn11.bigcommerce.com/s-y156s/images/stencil/1500x1500/products/3614/81645/1749b456-40a7-4f1a-b450-16094ef8aa04_DT105__33500.1755216945.JPG?c=2',
+    price: 'visit in store'
+  },
+  // Accessories & Refills
+  {
+    id: 'acc1',
+    name: 'Butane & Torches',
+    description: 'High-quality butane refills and powerful torches for all your needs.',
+    category: 'Accessories & Refills',
+    image: 'https://cdn11.bigcommerce.com/s-1n8r405nxd/images/stencil/1280w/products/13498/28511/Special-Blue-Monster-Pro-Butane-Torch-next-to-its-metal-toolbox__63187.1734030018.jpg?c=2',
+    price: 'visit in store'
+  },
+  {
+    id: 'acc2',
+    name: '510 Thread Batteries',
+    description: 'Reliable 510 thread batteries for your cartridges.',
+    category: 'Accessories & Refills',
+    image: 'https://ik.imagekit.io/egreensvape/wp-content/uploads/510-threaded-batteries.jpg',
+    price: 'visit in store'
   }
 ];
 

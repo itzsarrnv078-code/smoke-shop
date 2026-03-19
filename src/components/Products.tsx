@@ -12,7 +12,12 @@ const Products = () => {
     'Hookahs & Accessories',
     'Rolling Papers & Wraps',
     'Grinders & Tools',
-    'CBD Products'
+    'CBD Products',
+    'Kratom & 7-Hydroxy',
+    'THC Products',
+    'Cigars & Cigarettes',
+    'Detox Solutions',
+    'Accessories & Refills'
   ];
 
   const [activeCategory, setActiveCategory] = useState('All');

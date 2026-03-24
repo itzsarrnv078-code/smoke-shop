@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS } from '../constants';
-import { ShoppingBag, Info } from 'lucide-react';
+import { ShoppingBag, Info, X, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Product } from '../types';
 
 const Products = () => {
   const categories = [
@@ -9,6 +10,7 @@ const Products = () => {
     'New Arrivals',
     'Glass Pipes & Bongs',
     'Vapes & E-Cigarettes',
+    'Nicotine Pouches',
     'Hookahs & Accessories',
     'Rolling Papers & Wraps',
     'Grinders & Tools',
@@ -21,6 +23,12 @@ const Products = () => {
   ];
 
   const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [selectedProduct]);
 
   const filteredProducts = activeCategory === 'All' 
     ? PRODUCTS 
@@ -29,7 +37,7 @@ const Products = () => {
       : PRODUCTS.filter(p => p.category === activeCategory);
 
   return (
-    <section id="products" className="py-24 bg-black">
+    <section id="products" className="py-24 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -108,7 +116,8 @@ const Products = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className={`glass-card overflow-hidden group transition-all duration-500 ${
+                onClick={() => setSelectedProduct(product)}
+                className={`glass-card overflow-hidden group transition-all duration-500 cursor-pointer ${
                   product.isNew 
                     ? 'border-neon-green/20 hover:border-neon-green/50 shadow-[0_0_20px_rgba(57,255,20,0.05)]' 
                     : 'hover:border-neon-purple/30'
@@ -123,7 +132,7 @@ const Products = () => {
                     </div>
                   )}
                   <img
-                    src={product.image}
+                    src={Array.isArray(product.image) ? product.image[0] : product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -177,6 +186,137 @@ const Products = () => {
           </p>
         </div>
       </div>
+
+      {/* Product Modal Popup */}
+      <AnimatePresence>
+        {selectedProduct && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProduct(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-charcoal border border-white/10 rounded-3xl overflow-hidden max-w-3xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl"
+            >
+              <div className="md:w-1/2 relative bg-black/50 group/gallery">
+                <img 
+                  src={Array.isArray(selectedProduct.image) ? selectedProduct.image[currentImageIndex] : selectedProduct.image} 
+                  alt={selectedProduct.name} 
+                  className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300"
+                  referrerPolicy="no-referrer"
+                />
+                
+                {Array.isArray(selectedProduct.image) && selectedProduct.image.length > 1 && (
+                  <>
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(prev => prev === 0 ? (selectedProduct.image as string[]).length - 1 : prev - 1); }}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover/gallery:opacity-100 transition-opacity hover:bg-black/80"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(prev => prev === (selectedProduct.image as string[]).length - 1 ? 0 : prev + 1); }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover/gallery:opacity-100 transition-opacity hover:bg-black/80"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                      {(selectedProduct.image as string[]).map((_, i) => (
+                        <button 
+                          key={i} 
+                          onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(i); }}
+                          className={`w-2 h-2 rounded-full transition-all ${i === currentImageIndex ? 'bg-neon-green w-4' : 'bg-white/50'}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                <div className="absolute top-4 left-4">
+                  {selectedProduct.isNew && (
+                    <span className="bg-neon-green text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                      New Arrival
+                    </span>
+                  )}
+                </div>
+                {/* Mobile close button */}
+                <button 
+                  onClick={() => setSelectedProduct(null)}
+                  className="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full md:hidden hover:bg-black/80 transition-colors"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              
+              <div className="md:w-1/2 p-6 md:p-8 flex flex-col overflow-y-auto max-h-[50vh] md:max-h-[90vh]">
+                <div className="flex justify-between items-start mb-4 hidden md:flex">
+                  <div className="text-[10px] text-neon-green font-bold uppercase tracking-widest">
+                    {selectedProduct.category}
+                  </div>
+                  <button 
+                    onClick={() => setSelectedProduct(null)}
+                    className="text-white/50 hover:text-white transition-colors"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
+                
+                <div className="text-[10px] text-neon-green font-bold uppercase tracking-widest mb-2 md:hidden">
+                  {selectedProduct.category}
+                </div>
+
+                <h2 className="text-2xl md:text-3xl font-display font-bold mb-2 text-white">
+                  {selectedProduct.name}
+                </h2>
+                
+                <p className="text-white/70 font-light mb-6 text-sm md:text-base">
+                  {selectedProduct.description}
+                </p>
+
+                {selectedProduct.flavors && selectedProduct.flavors.length > 0 && (
+                  <div className="mb-6 flex-1">
+                    <h4 className="text-neon-purple font-bold uppercase tracking-widest text-xs mb-3 flex items-center gap-2">
+                      Available Flavors
+                      <span className="bg-neon-purple/20 text-neon-purple px-2 py-0.5 rounded-full text-[10px]">
+                        {selectedProduct.flavors.length}
+                      </span>
+                    </h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {selectedProduct.flavors.map((flavor, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm text-white/80 bg-white/5 px-3 py-2 rounded-lg border border-white/5">
+                          <span className="text-neon-green font-mono text-xs opacity-70 w-5">
+                            {index + 1}.
+                          </span>
+                          {flavor}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
+                  <div>
+                    <div className="text-[10px] text-white/50 uppercase tracking-widest mb-1">Price</div>
+                    <div className="text-2xl font-bold text-white">
+                      {selectedProduct.price || 'Contact for Price'}
+                    </div>
+                  </div>
+                  <div className="bg-neon-purple/20 text-neon-purple px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                    <MapPin size={16} />
+                    In-Store Only
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

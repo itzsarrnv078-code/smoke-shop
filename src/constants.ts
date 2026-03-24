@@ -42,7 +42,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://bigmosmokeshop.com/wp-content/uploads/2024/06/geek-bar-pulse-x-grp.webp',
     price: '$29.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Miami Mint', 'Watermelon Ice', 'Blue Razz Ice', 'Sour Apple Ice', 'Strawberry Mango', 'Tropical Rainbow Blast', 'Juicy Peach Ice', 'Grape Lemon', 'Blackberry B-Pop', 'Blueberry Watermelon']
   },
   {
     id: 'v2',
@@ -51,7 +52,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://bigmosmokeshop.com/wp-content/uploads/2025/10/geek-bar-clio-platinum.jpg',
     price: '$34.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Clear', 'Cool Mint', 'Tobacco', 'Menthol', 'Blue Razz', 'Peach Ice', 'Strawberry Ice', 'Watermelon Bubblegum']
   },
   {
     id: 'v3',
@@ -60,7 +62,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKtoaItMq7kmnH4ZrBYBsRodxRHTYQzXd34A&s',
     price: '$29.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Blue Cotton Candy', 'Juicy Peach', 'Pineapple Mango', 'Strawberry Sundae', 'Watermelon', 'Cranberry Soda', 'Kiwi Passion Fruit Guava', 'Cherry Lemon']
   },
   {
     id: 'v4',
@@ -69,7 +72,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://cdn11.bigcommerce.com/s-nlylv/images/stencil/1280x1280/products/2760/9968/CRYSTAL-CUBE-POD-KIT_MAIN-01-800x800__63949.1757948160.jpg?c=2',
     price: '$34.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Blue Razz Ice', 'California Cherry', 'Cherry Strazz', 'Dragon Strazz', 'Juicy Peach', 'Miami Mint', 'Sour Apple Ice', 'Watermelon Ice']
   },
   {
     id: 'v5',
@@ -78,7 +82,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://cdn.shoplightspeed.com/shops/608288/files/70848500/1652x1652x2/foger-foger-switch-pro-30k-5-disposable-kit.jpg',
     price: '$34.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Mint Ice', 'Strawberry Banana', 'Blueberry Ice', 'Mango Ice', 'Lush Ice', 'Pineapple Ice', 'Grape Ice', 'Peach Ice']
   },
   {
     id: 'v6',
@@ -87,7 +92,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://cdn11.bigcommerce.com/s-8tn3otes3v/images/stencil/960x960/products/9550/62128/Flum_UT_Bar_50K_Puff_Disposable_Banner__79626.1764350655.jpg?c=2',
     price: '$34.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Aloe Grape', 'Cool Mint', 'Strawberry Mango', 'Mixed Berries', 'Peach Ice', 'Watermelon', 'Blue Razz', 'Pina Polo']
   },
   {
     id: 'v7',
@@ -96,7 +102,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://smokeabsolute.com/cdn/shop/files/IMG-0005_1445x.webp?v=1695641848',
     price: '$19.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Berrymelon Icy', 'Blueberry Mint', 'Clear', 'Luscious Watermelon', 'Passion Kiwi', 'Spearmint', 'Strawberry Coconut', 'Vanilla Ice Cream']
   },
   {
     id: 'v8',
@@ -105,7 +112,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://smokesmartvegas.com/wp-content/uploads/2024/06/Flum_Mello_1024x_a376a7fb-54bd-49b6-babc-e3ccec6d40cc.webp',
     price: '$27.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Sunshine Cherry', 'Blue Razz Icy', 'Watermelon Icy', 'Peach Icy', 'Minty Drop', 'Summer Hawaiian', 'Strawberry Icy', 'Sour Apple Icy']
   },
   {
     id: 'v9',
@@ -114,7 +122,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://img1.wsimg.com/isteam/ip/b5a6b90e-f801-4158-ab79-d3bb6996dcc6/WhatsApp%20Image%202025-07-12%20at%2016.08.08.jpeg/:/rs=w:1280',
     price: '$34.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Blood Orange', 'Blueberry Mountain', 'Cherry Lemon', 'Cool Mint', 'Gum Mint', 'Strawberry Kiwi', 'Watermelon Ice', 'White Gummy']
   },
   {
     id: 'v10',
@@ -123,7 +132,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://sigdistro.com/wp-content/uploads/2025/05/1-2.jpg',
     price: '$29.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Fuji Melon Ice', 'Grapefruit Ice', 'Lemon Drop', 'Orange Creamsicle', 'Peach Mango Watermelon', 'Sour Apple', 'Strawberry Ice Cream', 'Watermelon Bubblegum']
   },
   {
     id: 'v11',
@@ -132,7 +142,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://provape.com/media/catalog/product/cache/896a704700b43f8a3d5d98936b485a9e/g/e/geek_bar_pulse_15k_puffs_zero_nicotine_disposable_1.png',
     price: '$29.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Blue Razz Ice', 'Miami Mint', 'Watermelon Ice', 'Strawberry Mango', 'Juicy Peach Ice', 'Sour Apple Ice', 'Tropical Rainbow Blast', 'Clear']
   },
   {
     id: 'v12',
@@ -141,7 +152,8 @@ export const PRODUCTS: Product[] = [
     category: 'Vapes & E-Cigarettes',
     image: 'https://cdn11.bigcommerce.com/s-m0kor0s1f1/images/stencil/original/products/587/1092/10_12_2023_Geek_Bar_Pulse_Disposable_Vape_10__51081.1697154596.jpg?c=1',
     price: '$24.99',
-    isNew: true
+    isNew: true,
+    flavors: ['Blow Pop', 'Blue Razz Ice', 'California Cherry', 'Fcuking FAB', 'Juicy Peach Ice', 'Meta Moon', 'Miami Mint', 'Sour Apple Ice', 'Strawberry Banana', 'Strawberry Mango', 'Tropical Rainbow Blast', 'Watermelon Ice', 'White Gummy Ice']
   },
   // Hookahs
   {
@@ -246,6 +258,32 @@ export const PRODUCTS: Product[] = [
     category: 'Accessories & Refills',
     image: 'https://ik.imagekit.io/egreensvape/wp-content/uploads/510-threaded-batteries.jpg',
     price: 'visit in store'
+  },
+  {
+    id: 'acc3',
+    name: 'Formula 420 Glass Cleaner',
+    description: 'The ultimate 1-minute glass, metal, and ceramic cleaner. Keep your pieces looking brand new with this hassle-free, highly effective cleaning solution.',
+    category: 'Accessories & Refills',
+    image: 'https://m.media-amazon.com/images/I/61H-2m-1N5L._AC_SL1500_.jpg',
+    price: 'visit in store'
+  },
+  // Nicotine Pouches
+  {
+    id: 'np1',
+    name: 'Premium Nicotine Pouches',
+    description: 'Explore our wide selection of premium, tobacco-free nicotine pouches. We carry top brands including Zyn, NYKD by Naked 100, and Lucy, offering a clean and discreet nicotine experience in various strengths and flavors.',
+    category: 'Nicotine Pouches',
+    image: [
+      'https://www.northerner.com/media/catalog/product/cache/1d02774203f9a41dca5505c567f31cbd/z/y/zyn_discovery_pack_3mg.jpg',
+      'https://vapedepotusa.com/wp-content/uploads/2024/07/NYKD-MAIN-UPDATED-e1720925365851.png',
+      'https://socaldistrollc.com/cdn/shop/files/Lucy4mg5ct1_800x.jpg?v=1721347894'
+    ],
+    price: 'visit in store',
+    flavors: [
+      'Zyn: Wintergreen, Spearmint, Peppermint, Cool Mint, Citrus, Coffee, Cinnamon, Smooth, Chill',
+      'NYKD: Mint, Wintergreen, Mango, Berry, Peach, Watermelon',
+      'Lucy: Wintergreen, Mint, Mango, Berry Citrus, Apple Ice, Espresso'
+    ]
   }
 ];
 

@@ -3,9 +3,10 @@ export interface Product {
   name: string;
   description: string;
   category: string;
-  image: string;
+  image: string | string[];
   price?: string;
   isNew?: boolean;
+  flavors?: string[];
 }
 
 export interface Review {

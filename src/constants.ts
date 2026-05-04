@@ -130,7 +130,7 @@ export const PRODUCTS: Product[] = [
     name: 'Geek Bar Rai 30k',
     description: 'Premium 30,000 puff disposable from the makers of Geek Bar. Superior build quality.',
     category: 'Vapes & E-Cigarettes',
-    image: 'https://sigdistro.com/wp-content/uploads/2025/05/1-2.jpg',
+    image: 'https://ohmcityvapes.com/cdn/shop/files/geek-bar-ria-nv30k_pink_raz_lemonade-disposable-vape_3a83e7c9-adfd-4361-af30-697f19f466a0_2048x.jpg?v=1743779224',
     price: '$29.99',
     isNew: true,
     flavors: ['Fuji Melon Ice', 'Grapefruit Ice', 'Lemon Drop', 'Orange Creamsicle', 'Peach Mango Watermelon', 'Sour Apple', 'Strawberry Ice Cream', 'Watermelon Bubblegum']
@@ -196,7 +196,7 @@ export const PRODUCTS: Product[] = [
     name: '7-Hydroxy Products',
     description: 'High-quality 7-hydroxy products including Krave and Perks Dozo.',
     category: 'Kratom & 7-Hydroxy',
-    image: 'https://cbdwholesaleus.com/image/cache/catalog/767203576007-800x800_0.jpg',
+    image: 'https://cdn11.bigcommerce.com/s-9rfkclyxvm/images/stencil/1280w/products/75719/80569/Se7en-Kratom-7-hydroxymitragynine-Chewable-Tablets-Lemon-Sweet-Tea-30mg-20ct-box__40141.1747242435.jpg?c=1',
     price: 'visit in store'
   },
   // THC Products
@@ -264,7 +264,7 @@ export const PRODUCTS: Product[] = [
     name: 'Formula 420 Glass Cleaner',
     description: 'The ultimate 1-minute glass, metal, and ceramic cleaner. Keep your pieces looking brand new with this hassle-free, highly effective cleaning solution.',
     category: 'Accessories & Refills',
-    image: 'https://m.media-amazon.com/images/I/61H-2m-1N5L._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/812XE1ZcW2L._AC_UF1000,1000_QL80_.jpg',
     price: 'visit in store'
   },
   // Nicotine Pouches

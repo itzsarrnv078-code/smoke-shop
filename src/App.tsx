@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PromotionalPopup from './components/PromotionalPopup';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Phone } from 'lucide-react';
 
@@ -28,6 +29,7 @@ export default function App() {
       />
 
       <Navbar />
+      <PromotionalPopup />
       
       <main>
         <Hero />

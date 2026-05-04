@@ -6,15 +6,15 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 bg-charcoal">
+      <div className="absolute inset-0 z-0">
         <img 
-          src="https://lh3.googleusercontent.com/geougc-cs/ABOP9pvMB2_AeFoy8Ww-DXPA1kCySjnj7uljtR_cOzhvFt0JKDJycD3-ZmFiTg3hJkur-OhUC-7SOIM1ye_bR9tqsgVJgKYEskBtKSohTCIK27rm7oQWhwDAMzkykAMhXrf0KTurtMTRqff8Xr20=s3024-w3024-h1722-rw" 
+          src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF4FmZCRdv9OVm9W_-bCB5i_11bUUFSOWLwru6goIsT93Y3zV7mh2pAe3s-FIwMLAXrm53tsi_st0NshPzgIG6W9PK2wYlncGLL-XunwvO98YP1CjQDiJG9y__HClA7w418aOWLNbpI4gsK=s1360-w1360-h1020-rw" 
           alt="Smoke Guru Storefront" 
-          className="w-full h-full object-cover opacity-40 transition-opacity duration-1000"
-          onLoad={(e) => (e.currentTarget.style.opacity = "0.4")}
+          className="w-full h-full object-cover transition-opacity duration-1000"
           referrerPolicy="no-referrer"
+          crossOrigin="anonymous"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         
         {/* Animated Glows */}
         <motion.div

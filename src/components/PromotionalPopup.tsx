@@ -64,8 +64,13 @@ const PromotionalPopup = () => {
                 Get the Geek Bar Pulse X at an <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-pink-500">unbeatable price</span>
               </h2>
               
-              <div className="text-4xl md:text-5xl font-extrabold text-neon-green mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.4)]">
-                💨 Now Only $99 <span className="text-xl text-white/50 font-normal ml-2">+ Tax</span>
+              <div className="flex flex-col mb-6 drop-shadow-[0_0_15px_rgba(57,255,20,0.4)]">
+                <span className="text-2xl md:text-3xl font-extrabold text-white mb-1 uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
+                  4 Pieces For
+                </span>
+                <div className="text-4xl md:text-5xl font-extrabold text-neon-green">
+                  💨 Now Only $99 <span className="text-xl text-white/50 font-normal ml-2">+ Tax</span>
+                </div>
               </div>
               
               <p className="text-white/70 text-lg mb-8 font-light leading-relaxed">
